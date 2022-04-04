@@ -1,12 +1,12 @@
 
 
 resource "aws_vpc" "main" {
-  cidr_block = "40.0.0.0/16"
+  cidr_block = "50.0.0.0/16"
 }
 
 resource "aws_subnet" "subnet1" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "40.0.1.0/24"
+  cidr_block = "50.0.1.0/24"
 
   tags = {
     Name = "subnet1"
@@ -15,7 +15,7 @@ resource "aws_subnet" "subnet1" {
 
 resource "aws_subnet" "subnet2" {
   vpc_id     = aws_vpc.main.id
-  cidr_block = "40.0.2.0/24"
+  cidr_block = "50.0.2.0/24"
 
   tags = {
     Name = "subnet2"
@@ -71,7 +71,7 @@ terraform {
   backend "s3" {
     bucket   = "my-bucket-omar-hamdaa"
     key      = "terraform.tfstate"
-    region   = "us-east-1"
+    region   = "us-east-2"
   }
 
 }
