@@ -69,14 +69,7 @@ resource "aws_route_table_association" "public-subnet2-association" {
 
 
 
-resource "aws_s3_bucket" "b" {
-  bucket = "my-bucket-omar-hamdaa"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
 
 terraform {
   backend "s3" {
@@ -89,21 +82,7 @@ terraform {
 
 
 
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": "s3:ListBucket",
-      "Resource": "arn:aws:s3:::mybucket"
-    },
-    {
-      "Effect": "Allow",
-      "Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"],
-      "Resource": "arn:aws:s3:::mybucket/path/to/my/key"
-    }
-  ]
-}
+
 
 
 
