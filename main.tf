@@ -81,7 +81,7 @@ resource "aws_s3_bucket" "b" {
 terraform {
   backend "s3" {
     bucket   = "my-bucket-omar-hamdaa"
-    key      = "terraform"
+    key      = "terraform.tfstate"
     region   = "us-east-1"
   }
 
