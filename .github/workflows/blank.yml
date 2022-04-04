@@ -13,7 +13,6 @@ jobs:
       - name: check out repo code
         uses: actions/checkout@v3
       - run:  sudo terraform init
-      - run:  sudo terraform plan
       - run: sudo terraform apply -auto-approve
         
           ##- name:  configure AWS credentials
