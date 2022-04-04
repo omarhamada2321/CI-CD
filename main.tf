@@ -70,7 +70,7 @@ resource "aws_route_table_association" "public-subnet2-association" {
 terraform {
   backend "s3" {
     bucket   = "my-bucket-omar-hamdaa"
-    key      = "terraform.tfstate"
+    key      = "file/terraform.tfstate"
     region   = "us-east-2"
   }
 
