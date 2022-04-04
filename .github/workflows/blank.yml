@@ -12,15 +12,6 @@ jobs:
         uses: hashicorp/setup-terraform@v1
       - name: check out repo code
         uses: actions/checkout@v3
-      - run:  sudo terraform init
-      - run:  sudo terraform plan
-      - run: sudo terraform apply -auto-approve
-        
-          ##- name:  configure AWS credentials
-          #uses:  aws-actions/configure-aws-credentials@v1
-          #with:
-          #   aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          #   aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # - run:  sudo terraform init
-          # - run:  sudo terraform plan
-          # - run: sudo terraform apply -auto-approve
+      - run:   terraform init
+      - run:  terraform plan
+      - run: terraform apply -auto-approve
